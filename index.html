@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>SITTA Login</title>
+  </head>
+  <body>
+    <div class="split-container">
+      <!-- Panel Kiri untuk Logo dan Deskripsi -->
+      <div class="left-panel">
+        <div class="brand-content">
+          <img src="img/logo-ut.png" alt="Logo UT" class="logo-ut" />
+          <h1 class="main-title">Hello <br />Mahasiswa UT,</h1>
+          <p class="description">
+            Sistem Informasi pemesanan bahan ajar SITTA untuk sistem kebutuhan
+            proses pemesanan dan distribusi bahan ajar di UT
+          </p>
+          <p class="copyright">
+            © 2026 Universitas Terbuka. All Right reserved
+          </p>
+        </div>
+      </div>
+
+      <!-- Panel Kanan untuk Form Login -->
+      <div class="right-panel">
+        <div class="form-wrapper">
+          <h2 class="brand-text">SITTA - Universitas Terbuka</h2>
+
+          <div class="welcome-text">
+            <h3>Selamat Datang!</h3>
+            <p>Belum punya akun? <a href="#" id="link-daftar">Buat Akun</a></p>
+          </div>
+
+          <form id="login-form">
+            <input
+              type="email"
+              id="email"
+              placeholder="nama@ut.ac.id"
+              required
+            />
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+
+            <button type="submit" class="btn-dark">Login</button>
+          </form>
+
+          <div class="forgot-wrapper">
+            <span
+              >Lupa Password?
+              <a href="#" id="link-lupapassword">Klik Disini</a></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pop-up Lupa Password -->
+    <div id="popup-reset" class="modal-reset">
+      <div class="reset-content">
+        <span class="close-btn" id="closeButton">&times;</span>
+        <h3>Reset Password</h3>
+        <p>Masukan email anda yang terdaftar.</p>
+        <form id="reset-form">
+          <input type="email" placeholder="Email anda" required />
+          <button type="submit" class="btn-dark mt-15">Reset</button>
+        </form>
+      </div>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

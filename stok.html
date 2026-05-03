@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock BA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Pembungkus Utama -->
+    <div class="dashboard-layout">
+      <!-- Left Content  -->
+      <aside class="sidebar">
+        <img src="img/logo-ut.png" alt="Logo UT" class="logodash" />
+        <h2 class="brand-logo">SITTA UT</h2>
+
+        <ul class="nav-menu">
+          <li><a href="dashboard.html" class="dashboard">Dashboard</a></li>
+          <li><a href="stok.html" class="active">Informasi Bahan Ajar</a></li>
+          <li>
+            <a href="tracking.html">Tracking Pengiriman</a>
+          </li>
+          <!-- Menu Laporan dan Sub Menu -->
+          <li class="lap-submenu">
+            <a href="#">Laporan ▾</a>
+            <ul class="sub-menu">
+              <li><a href="#">Monitoring Progress DO Bahan Ajar</a></li>
+              <li><a href="#">Rekap Bahan Ajar</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" class="histori-transaksi"
+              >Histori Transaksi Bahan Ajar</a
+            >
+          </li>
+        </ul>
+      </aside>
+      <!-- Right Content -->
+      <main class="main-content">
+        <!-- Header Greeting -->
+        <header class="greeting">
+          <h2 id="teks-greeting">Sapaan...</h2>
+          <button id="btn-logout" class="btn-logout">Logout</button>
+        </header>
+
+        <!-- Area Utama Penampilan -->
+        <section class="content-area">
+          <div class="card">
+            <div class="header-stok">
+              <h3>Stok Opname Bahan Ajar (Gudang)</h3>
+              <button class="btn-dark" style="width: auto">
+                + Tambah Barang
+              </button>
+            </div>
+
+            <div class="table-responsive">
+              <table class="table-stok">
+                <thead>
+                  <tr>
+                    <th>COVER</th>
+                    <th>LOKASI</th>
+                    <th>KODE BARANG</th>
+                    <th>NAMA BARANG</th>
+                    <th>JENIS</th>
+                    <th>EDISI</th>
+                    <th>STOK</th>
+                    <th>STATUS</th>
+                  </tr>
+                </thead>
+                <tbody id="body-stok">
+                  <!-- Manipulasi DOM -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
