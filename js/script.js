@@ -178,7 +178,7 @@ if (loginForm) {
       //maka
       alert(`Login Berhasil!. Selamat Datang, ${userValid.nama}.`);
       localStorage.setItem("namaAktif", userValid.nama);
-      window.location.href = "dashboard.html";
+      window.location.href = "./dashboard.html";
     } else {
       alert("Email/Password yang anda masukkan salah.");
     }
