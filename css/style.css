@@ -152,11 +152,14 @@ input:focus {
 .dashboard-layout {
   display: flex;
   height: 100vh;
+  align-items: stretch;
   background-color: #f4f7f6;
 }
 
 .sidebar {
-  width: 280px;
+  width: 260px;
+  flex-shrink: 0;
+  min-height: 100vh;
   background: linear-gradient(135deg, #2b32b2, #1488cc);
   color: white;
   padding: 20px 0;
@@ -200,6 +203,8 @@ input:focus {
 
 .main-content {
   flex: 1;
+  min-width: 0;
+  overflow-x: auto;
   display: flex;
   flex-direction: column;
 }
@@ -424,6 +429,18 @@ input:focus {
   border: 1px solid #e74a3b;
 }
 
+.btn-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #333;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.btn-close-sidebar {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .split-container {
     flex-direction: column;
@@ -443,5 +460,44 @@ input:focus {
 
   .left-panel .description {
     font-size: 14px;
+  }
+
+  .description {
+    padding-bottom: 15px;
+  }
+
+  /* //button hamburger */
+  .btn-hamburger {
+    display: inline-block;
+  }
+  .topbar {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Posisi awal: Sembunyi total */
+    width: 260px; /* Lebar menu saat ditarik */
+    height: 100vh; /* Tinggi layar penuh */
+    z-index: 1000; /* Pastikan menimpa semua elemen lain */
+    transition: 0.3s ease-in-out; /* Animasi mulus selama 0.3 detik */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5); /* Efek bayangan agar elegan */
+  }
+  .sidebar.muncul {
+    left: 0;
+  }
+
+  .btn-close-sidebar {
+    display: block;
+    position: absolute; /* Bebas diposisikan di mana saja di dalam sidebar */
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #ffffff; /* Warna putih agar kontras dengan sidebar biru */
+    font-size: 36px; /* Ukuran yang nyaman untuk ditekan jari */
+    cursor: pointer;
   }
 }

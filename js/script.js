@@ -329,3 +329,21 @@ if (bodyStok) {
     bodyStok.appendChild(tr);
   });
 }
+
+const btnHamburger = document.getElementById("btn-hamburger");
+const btnClose = document.getElementById("btn-close-sidebar"); // Tangkap tombol X
+const sidebar = document.querySelector(".sidebar");
+
+// Perintah untuk memunculkan (Tombol ☰)
+if (btnHamburger && sidebar) {
+  btnHamburger.addEventListener("click", function () {
+    sidebar.classList.add("muncul");
+  });
+}
+
+// Perintah untuk menyembunyikan (Tombol X)
+if (btnClose && sidebar) {
+  btnClose.addEventListener("click", function () {
+    sidebar.classList.remove("muncul"); // Cabut saklarnya
+  });
+}
