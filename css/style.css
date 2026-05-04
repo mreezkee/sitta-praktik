@@ -423,3 +423,25 @@ input:focus {
   background-color: rgba(231, 74, 59, 0.1);
   border: 1px solid #e74a3b;
 }
+
+@media screen and (max-width: 768px) {
+  .split-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+    min-height: auto;
+    padding: 40px 20px;
+  }
+
+  .left-panel .main-title {
+    font-size: 32px;
+  }
+
+  .left-panel .description {
+    font-size: 14px;
+  }
+}
